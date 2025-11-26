@@ -1,0 +1,234 @@
+/* ------------------------------ */
+/*        CONFIGURACIÓN GLOBAL    */
+/* ------------------------------ */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;  /* 16px es el default, así ya todo baja un poquito */
+}
+/* Navbar */
+.navbar-brand, 
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #4cc9f0 !important;
+}
+
+/* ------------------------------ */
+/*             HERO               */
+/* ------------------------------ */
+
+#hero {
+  background: url("../assets/fondoprincipal1.jpg") center/cover no-repeat;
+  position: relative;
+  min-height: 100vh;
+}
+
+#hero::after {
+  content:"";
+  position: absolute;
+  inset:0;
+  background: rgba(0,0,0,0.7);
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------------------ */
+/*        BOTÓN DEGRADADO         */
+/* ------------------------------ */
+
+.btn-gradient {
+  background: linear-gradient(90deg, #4cc9f0, #7209b7);
+  border-radius: 40px;
+  color: white;
+  border: none;
+  transition: .3s ease;
+}
+
+.btn-gradient:hover {
+  opacity: .85;
+  transform: translateY(-3px);
+}
+
+/* ------------------------------ */
+/*          CONTADOR              */
+/* ------------------------------ */
+
+.count-number {
+  color: #bbb;
+  font-size: .8rem;
+}
+
+.count-value {
+  color: white;
+  font-size: 1.6rem;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* ------------------------------ */
+/*      SPEAKER CAROUSEL          */
+/* ------------------------------ */
+
+.speaker-name {
+    color: #ffffff;            
+    font-size: 25px;           /* más grande */
+    font-weight: 500;          /* más grueso */
+    text-shadow: 0 0 8px rgba(0,0,0,0.8); /* efecto para que destaque sobre el fondo */
+    margin-top: 15px;
+}
+.speaker-role {
+    color: #ffd86b !important;      /* amarillo dorado visible */
+    font-size: 15px !important;     /* más grande */
+    font-weight: 600;
+    margin-top: 5px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.9); /* hace que se vea sobre fondos oscuros */
+}
+
+.speaker-card img {
+  width: 260px !important;   /* ← CAMBIA DE 70px A 120px */
+  height: 260px !important;
+  object-fit: cover;
+}
+
+.speaker-card:hover {
+  background-color: rgba(45,45,45,0.95);
+  transform: translateY(-4px);
+}
+
+/* Flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ------------------------------ */
+/*        SECCIÓN SPEAKERS        */
+/* ------------------------------ */
+
+.info-section {
+  background-color: #1a1a1a;
+  padding: 60px 0;
+}
+
+.info-card {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 12px;
+  width: 110px;
+  transition: .2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ------------------------------ */
+/*       FORMULARIO REGISTRO      */
+/* ------------------------------ */
+
+#registro h2 {
+  color: #111 !important;
+  font-weight: 700;
+}
+
+#registro label {
+  color: #333 !important;
+  font-weight: 500;
+}
+
+
+#register {
+  background-color: #ffffff;
+  padding: 60px 0;
+}
+
+#register .form-control {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+}
+
+#register .form-control:focus {
+  border-color: #7209b7;
+  box-shadow: 0 0 5px #7209b7;
+}
+#alerta {
+    font-size: 1rem;
+    padding: 12px 18px;
+   
+}
+
+/* ------------------------------ */
+/*              FOOTER            */
+/* ------------------------------ */
+
+footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* ------------------------------ */
+/*         MODAL PREMIUM          */
+/* ------------------------------ */
+
+.modern-modal {
+    background: #ffffff !important;
+    border-radius: 18px;
+    padding: 0;
+    border: none;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+    animation: modalShow 0.25s ease-out;
+}
+
+@keyframes modalShow {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.success-icon {
+    font-size: 3rem;
+    animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.4); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.modal-text {
+    font-size: 1.1rem;
+    color: #333;
+    opacity: 0.85;
+}
+
+/* textos negros */
+.modern-modal h3,
+.modern-modal p {
+    color: #000 !important;
+}
+input:invalid {
+    border-color: #ccc !important;
+    box-shadow: none !important;
+}
+
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #ccc !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
